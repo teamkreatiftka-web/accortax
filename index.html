@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACCORTAX - Solusi Akuntansi dan Pajak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Outfit', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                red: '#DB2617',
+                dark: '#050505', 
+                gray: '#171717', 
+                light: '#F4F4F5', 
+                surface: '#0A0A0A',
+                card: '#121212', 
+                border: 'rgba(255, 255, 255, 0.08)', 
+              },
+              saas: {
+                primary: '#DB2617', 
+                secondary: '#991B1B', 
+                accent: '#FCA5A5', 
+                dark: '#0F172A', 
+              }
+            },
+            boxShadow: {
+              'ios': '0 8px 24px -6px rgba(0, 0, 0, 0.04)',
+              'ios-hover': '0 12px 32px -4px rgba(0, 0, 0, 0.08)',
+              'glow': '0 0 60px -15px rgba(219, 38, 23, 0.5)',
+              'glow-red': '0 0 60px -15px rgba(219, 38, 23, 0.4)', 
+              'subtle': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+              'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+              'glass-hover': '0 8px 32px 0 rgba(219, 38, 23, 0.15)',
+              'input': '0 2px 4px rgba(0,0,0,0.02), 0 0 0 1px rgba(0,0,0,0.04)',
+              'card-float': '0 20px 40px -5px rgba(0, 0, 0, 0.1), 0 10px 20px -5px rgba(0, 0, 0, 0.04)',
+            },
+            borderRadius: {
+              '2xl': '1rem',
+              '3xl': '1.5rem', 
+              '4xl': '2rem',
+              '5xl': '2.5rem',
+            },
+            letterSpacing: {
+              'tighter': '-0.04em',
+              'tight': '-0.02em',
+              'widest': '0.1em',
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(to right, #202020 1px, transparent 1px), linear-gradient(to bottom, #202020 1px, transparent 1px)",
+              'grid-pattern-light': "linear-gradient(to right, #e5e7eb 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)",
+              'hero-gradient': "radial-gradient(ellipse at top center, #FEF2F2 0%, #FFFFFF 60%, #FFFFFF 100%)", 
+            },
+            animation: {
+              'marquee': 'marquee 25s linear infinite',
+              'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'float': 'float 6s ease-in-out infinite',
+              'float-delayed': 'float 6s ease-in-out 3s infinite',
+              'float-slow': 'float 8s ease-in-out 1s infinite',
+              'float-reverse': 'floatReverse 7s ease-in-out infinite',
+              'blob': 'blob 7s infinite',
+              'dash': 'dash 1.5s ease-in-out infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+              fadeInUp: {
+                '0%': { opacity: 0, transform: 'translateY(20px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              floatReverse: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(20px)' },
+              },
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              },
+              dash: {
+                '0%': { strokeDashoffset: '1000' },
+                '100%': { strokeDashoffset: '0' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+      
+      ::selection {
+        background-color: #DB2617;
+        color: white;
+      }
+
+      /* TEXTURE: Subtle Noise/Grain */
+      .bg-texture-noise {
+        background-color: #ffffff;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+      }
+      
+      .dark .bg-texture-noise {
+        background-color: #050505;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+      }
+
+      /* GLASSMORPHISM UTILITIES */
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+      }
+      
+      .dark .glass-panel {
+        background: rgba(20, 20, 20, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+      }
+      
+      .glass-panel-dark {
+        background: rgba(10, 10, 10, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .glass-card-hover:hover {
+        background: rgba(255, 255, 255, 0.85);
+        border-color: rgba(219, 38, 23, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(219, 38, 23, 0.1);
+      }
+      
+      .dark .glass-card-hover:hover {
+        background: rgba(30, 30, 30, 0.85);
+        border-color: rgba(219, 38, 23, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(219, 38, 23, 0.1);
+      }
+
+      /* ILLUSTRATION ELEMENTS (Abstract Blobs) */
+      .blob-bg {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.6;
+        z-index: 0;
+      }
+      
+      .bg-grid-dark {
+        background-size: 40px 40px;
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+      }
+
+      .bg-grid-light {
+        background-size: 40px 40px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+        mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+      }
+      
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      
+      .mesh-gradient-red {
+        background-color: #DB2617;
+        background-image: radial-gradient(at 88% 40%, hsla(350,100%,70%,1) 0px, transparent 50%),
+                          radial-gradient(at 0% 0%, hsla(10,100%,46%,1) 0px, transparent 50%);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "path": "https://esm.sh/path@^0.12.7",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "url": "https://esm.sh/url@^0.11.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
